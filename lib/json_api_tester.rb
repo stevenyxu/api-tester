@@ -1,8 +1,6 @@
 require 'rspec'
 require 'rake'
 
-require 'json_api_tester/core'
-
 module JSONAPITester
 	class Base
 		def self.root
@@ -10,3 +8,7 @@ module JSONAPITester
 		end
 	end
 end
+
+$: << File.join(JSONAPITester::Base.root, 'lib')
+
+require 'json_api_tester/core'

@@ -1,4 +1,4 @@
-require 'json_api_tester'
+require 'spec_helper'
 
 describe "initializer" do
 	it "should set the root path" do
