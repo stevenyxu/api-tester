@@ -6,3 +6,5 @@ require "bundler/setup"
 $: << File.expand_path(File.join File.dirname(__FILE__), '..', 'lib')
 
 require 'json_api_tester'
+
+JSONAPITester::Core::Runner.run
