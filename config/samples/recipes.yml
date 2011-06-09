@@ -1,11 +1,82 @@
 recipes:
 - recipe:
-    name: 'GET /users'
-    request: null
+    name: GET /users.json
+    request:
+      method: get
+      path: /users.json
+    response:
+      status: 200
+      body: '[]'
+- recipe:
+    name: GET /users/1.json for a user that doesn't exist
+    request:
+      method: get
+      path: /users/INVALID_ID.json
+    response:
+      status: 404
+- recipe:
+    name: GET /users/new.json
+    request:
+      method: get
+      path: /users/new.json
+    response:
+      status: 200
+      body: '{"user":{"email":null,"password":null}}'
+- recipe:
+    name: POST /users.json with no postdata
+    request:
+      method: post
+      path: /users.json
+    response:
+      status: 411
+- recipe:
+    name: POST /users.json
+    request:
+      method: post
+      path: /users.json
+      data:
+        user[email]: me@email.com
+        user[password]: password
+    response:
+      status: 201
+      body: '{"user":{"email":"me@email.com","id":1,"password":"password"}}'
+- recipe:
+    name: GET /users.json
+    request:
+      method: get
+      path: /users.json
+    response:
+      status: 200
+      body: '[{"user":{"email":"me@email.com","id":1,"password":"password"}}]'
+- recipe:
+    name: GET /users/1.json
+    request:
+      method: get
+      path: /users/1.json
+    response:
+      status: 200
+      body: '{"user":{"email":"me@email.com","id":1,"password":"password"}}'
+- recipe:
+    name: PUT /users/1.json
+    request:
+      method: put
+      path: /users/1.json
+      data:
+        user[email]: you@email.com
     response:
       status: 200
 - recipe:
-    name: 'GET /users/1'
-    request: null
+    name: DELETE /users/1.json
+    request:
+      method: delete
+      path: /users/1.json
     response:
       status: 200
+- recipe:
+    name: GET /users.json
+    request:
+      method: get
+      path: /users.json
+    response:
+      status: 200
+      body: '[]'
