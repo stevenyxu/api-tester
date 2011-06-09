@@ -1,6 +1,6 @@
 require 'yaml'
 
-module JSONAPITester
+module APITester
 	module Core
 		class Recipe
 
@@ -25,7 +25,7 @@ module JSONAPITester
 			end
 
 			def self.recipe_book
-				@@recipe_book ||= YAML::load(File.read File.join(JSONAPITester::Base.root, 'config', 'recipes.yml'))
+				@@recipe_book ||= YAML::load(File.read File.join(APITester::Base.root, 'config', 'recipes.yml'))
 			end
 
 			def self.raw_recipes

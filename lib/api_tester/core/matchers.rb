@@ -1,4 +1,4 @@
-module JSONAPITester
+module APITester
 	module Core
 		module Matchers
 			RSpec::Matchers.define :have_status_code do |expected|

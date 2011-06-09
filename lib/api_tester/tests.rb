@@ -1,4 +1,4 @@
-JSONAPITester::Core::Recipe.all.each do |recipe|
+APITester::Core::Recipe.all.each do |recipe|
 	describe "checking #{recipe.name}" do
 		before(:all) do
 			@response = recipe.request.response

@@ -1,7 +1,7 @@
 require 'rspec'
 require 'rake'
 
-module JSONAPITester
+module APITester
 	class Base
 		def self.root
 			File.expand_path(File.join File.dirname(__FILE__), '..')
@@ -9,6 +9,6 @@ module JSONAPITester
 	end
 end
 
-$: << File.join(JSONAPITester::Base.root, 'lib')
+$: << File.join(APITester::Base.root, 'lib')
 
-require 'json_api_tester/core'
+require 'api_tester/core'

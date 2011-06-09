@@ -1,4 +1,4 @@
-JSON API tester
+ API tester
 ===============
 
 Requirements

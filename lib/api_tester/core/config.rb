@@ -1,6 +1,6 @@
 require 'yaml'
 
-module JSONAPITester
+module APITester
 	module Core
 		class Config
 

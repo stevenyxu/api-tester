@@ -3,6 +3,6 @@
 require "rubygems"
 require "bundler/setup"
 
-require File.expand_path(File.join File.dirname(__FILE__), '..', 'lib', 'json_api_tester')
+require File.expand_path(File.join File.dirname(__FILE__), '..', 'lib', 'api_tester')
 
-JSONAPITester::Core::Runner.run
+APITester::Core::Runner.run

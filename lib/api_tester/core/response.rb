@@ -1,4 +1,4 @@
-module JSONAPITester
+module APITester
 	module Core
 		class Response
 

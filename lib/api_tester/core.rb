@@ -1,0 +1,6 @@
+require 'api_tester/core/config'
+require 'api_tester/core/matchers'
+require 'api_tester/core/recipe'
+require 'api_tester/core/response'
+require 'api_tester/core/request'
+require 'api_tester/core/runner'

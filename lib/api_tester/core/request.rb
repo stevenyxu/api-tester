@@ -1,6 +1,6 @@
 require 'net/http'
 
-module JSONAPITester
+module APITester
 	module Core
 		class Request
 
