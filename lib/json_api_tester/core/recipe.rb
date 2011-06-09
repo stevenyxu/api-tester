@@ -12,6 +12,10 @@ module JSONAPITester
 				end
 			end
 
+			def response= hash
+				@response = Response.new hash
+			end
+
 			def request= hash
 				@request = Request.new hash
 			end

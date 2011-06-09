@@ -4,7 +4,7 @@ JSONAPITester::Core::Recipe.all.each do |recipe|
 			@response = recipe.request.response
 		end
 		it "should yield the expected response" do
-			recipe.response.should == @response
+			@response.should have_status_code(recipe.response.status)
 		end
 		after(:all) do
 			@response = nil
