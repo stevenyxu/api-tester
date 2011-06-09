@@ -11,10 +11,10 @@ Requirements
 Instructions
 ------------
 
-Copy `./config/config.yml.sample` to `./config/config.yml` and edit settings as you please.
-Get a recipe book. Sample recipe books are available in `./config/samples/recipes.yml`.
-Run `bundle install` to make sure you have all dependencies.
-Run `./bin/test` or `bundle exec ./bin/test`.
+* Copy `./config/config.yml.sample` to `./config/config.yml` and edit settings as you please.
+* Get a recipe book. Sample recipe books are available in `./config/samples/recipes.yml`.
+* Run `bundle install` to make sure you have all dependencies.
+* Run `./bin/test` or `bundle exec ./bin/test`.
 
 Sample recipes
 --------------
