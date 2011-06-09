@@ -2,7 +2,7 @@ module APITester
 	module Core
 		class Response
 
-			attr_accessor :status
+			attr_accessor :status, :body
 
 			def initialize attrs
 				attrs.each do |k,v|
