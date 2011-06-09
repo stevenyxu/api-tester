@@ -1,2 +1,3 @@
-require 'json_api_tester/core/runner'
 require 'json_api_tester/core/recipe'
+require 'json_api_tester/core/request'
+require 'json_api_tester/core/runner'
