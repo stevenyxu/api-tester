@@ -16,7 +16,7 @@ module APITester
 			end
 
 			def self.ssl?
-				true == @@values['ssl']
+				@@values['ssl'] != nil && @@values['ssl']
 			end
 
 		end
