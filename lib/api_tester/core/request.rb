@@ -4,7 +4,7 @@ module APITester
 	module Core
 		class Request
 
-			attr_accessor :method, :path
+			attr_accessor :method, :path, :data
 
 			def self.http
 				Net::HTTP.new(Config.host, Config.port).tap do |http|
@@ -20,6 +20,7 @@ module APITester
 
 			def get_response
 				request = requestor_class.new path
+				request.set_form_data(data) if data
 				Request.http.request request
 			end
 
